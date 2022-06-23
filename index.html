@@ -4,12 +4,190 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book a flight todat</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
 
     <script defer src="js/script.js"></script>
+
+    <title>Manahaim Flight Company</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h2 class="welcome">Log in and get started</h2>
+      <form class="input">
+        <input
+          type="text"
+          class="input-login input-login--username"
+          placeholder="user"
+        />
+        <input
+          type="password"
+          class="input-login input-login--pin"
+          placeholder="PIN"
+          maxlength="4"
+        />
+
+        <button type="submit" class="btn-login">&rarr;</button>
+      </form>
+    </header>
+
+    <main class="app">
+      <!-- DATE -->
+      <div class="date-container">
+        <p class="welcome">As of <span class="date">18/06/2022</span></p>
+      </div>
+
+      <!-- ROUTES -->
+      <div class="routes">
+        <table>
+          <thead>
+            <tr>
+              <th>Flight route</th>
+              <th>Distance</th>
+              <th>Price</th>
+              <th>Time of travel</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nairobi to Nakuru</td>
+              <td>320 km</td>
+              <td>$145</td>
+              <td>5 hours</td>
+            </tr>
+            <tr>
+              <td>Nairobi to Mombasa</td>
+              <td>186 km</td>
+              <td>$85</td>
+              <td>1 hours</td>
+            </tr>
+            <tr>
+              <td>Nairobi to Kisumu</td>
+              <td>420 km</td>
+              <td>$235</td>
+              <td>3 hours</td>
+            </tr>
+            <tr>
+              <td>Nairobi to Mombasa</td>
+              <td>186 km</td>
+              <td>$273</td>
+              <td>3 hours</td>
+            </tr>
+            <tr>
+              <td>Kisumu to Mombasa</td>
+              <td>450 km</td>
+              <td>$654</td>
+              <td>6 hours</td>
+            </tr>
+            <tr>
+              <td>Kisumu to Nakuru</td>
+              <td>267 km</td>
+              <td>$150</td>
+              <td>4 hours</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PROFILE -->
+      <div class="user-profile">
+        <div class="profile">
+          <!--
+           <img src="img/32.jpg" alt="User profile" class="profile-img" />
+        <p class="profile-name">
+          <i class="fa-solid fa-user"></i><span>John Doe</span>
+        </p>
+        <a href="#" class="profile-link profile-link--email"
+          ><i class="fa-solid fa-envelope"></i><span>johndoe@gmail.com</span></a
+        >
+        <a href="#" class="profile-link profile-link--twitter"
+          ><i class="fa-brands fa-twitter"></i><span>@johndoe</span></a
+        >
+        <p class="profile-county">
+          <i class="fa-solid fa-location-dot"></i><span>Nairobi</span>
+        </p>
+        <p class="profile-rating">
+          <i class="fa-solid fa-star"></i><span>9</span>
+        </p>
+        --></div>
+        <div class="profile-buttons">
+          <button class="profile-button profile-button--book">
+            Book flight
+          </button>
+          <button class="profile-button profile-button--logout">Log out</button>
+        </div>
+      </div>
+
+      <!-- HISTORY OF TRAVEL -->
+      <div class="history">
+        <h2 class="history-heading">History of your travels</h2>
+        <ul class="history-list">
+          <!-- <li class="history-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </li>
+          <li class="history-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </li>
+          <li class="history-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </li> -->
+        </ul>
+      </div>
+
+      <!-- DESTINATIONS -->
+      <div class="destination">
+        <h2 class="destination-header">Current destinations</h2>
+        <div class="destination-container">
+          <p class="destination-name">Mombasa</p>
+          <p class="destination-name">Nairobi</p>
+          <p class="destination-name">Nakuru</p>
+          <p class="destination-name">Kisumu</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Book a flight -->
+    <section class="section-book hide">
+      <div class="book">
+        <form class="form">
+          <div class="form-group">
+            <label for="date">Select date of travel</label>
+            <input type="date" class="form-input form-input--date" />
+          </div>
+          <div class="form-group">
+            <label for="time">Select time of travel</label>
+            <input type="time" class="form-input form-input--time" />
+          </div>
+          <div class="form-group">
+            <label for="from">From:</label>
+            <input
+              type="text"
+              class="form-input form-input--from"
+              placeholder="e.g Nairobi..."
+            />
+          </div>
+          <div class="form-group">
+            <label for="to">Destination:</label>
+            <input
+              type="text"
+              class="form-input form-input--to"
+              placeholder="e.g Nakuru..."
+            />
+          </div>
+          <button type="submit" class="form-btn">Book flight now</button>
+        </form>
+      </div>
+    </section>
+  </body>
 </html>
